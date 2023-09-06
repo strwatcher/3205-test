@@ -1,11 +1,12 @@
 import { Elysia, t } from "elysia";
+import { emailPart, numberPart } from "../utils/formats";
 
 export const userModel = new Elysia().model({
-  QueryDto: t.Object({
-    email: t.String(),
-    number: t.Optional(t.String()),
+  GetUsersQueryDto: t.Object({
+    email: emailPart,
+    number: numberPart,
   }),
-  UsersDto: t.Array(
+  GetUsersDto: t.Array(
     t.Object({
       email: t.String(),
       number: t.String(),
