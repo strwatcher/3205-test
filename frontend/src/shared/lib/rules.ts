@@ -14,7 +14,7 @@ export const rules = {
   number: (): Rule<string> => ({
     name: "number",
     validator: (value) => {
-      return /d+/.test(value) || !value;
+      return /[0-9]+/.test(value) || !value;
     },
     errorText: "Неверный формат",
   }),

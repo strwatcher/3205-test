@@ -39,8 +39,6 @@ sample({
 
 const $pending = or(getUsersQuery.$pending, $lastCallAborted);
 
-getUsersQuery.$pending.watch(console.log);
-
 export function useUsers() {
   const pending = useUnit($pending);
   const users = useUnit(getUsersQuery.$data);
