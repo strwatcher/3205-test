@@ -4,10 +4,6 @@ windows:
     layout: tiled
     shell_command_before:
       - nvim
-  - window_name: vcs
-    layout: tiled
-    shell_command_before:
-      - lazygit
   - window_name: runner
     layout: tiled
     shell_command_before:
