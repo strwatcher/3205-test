@@ -5,7 +5,23 @@ import { users } from "./users";
 import { identify } from "./identify";
 
 const app = new Elysia()
-  .use(swagger())
+  .use(
+    swagger({
+      documentation: {
+        servers: [
+          { url: "http://localhost:3000", description: "Development server" },
+        ],
+        info: {
+          title: "3205 Test",
+          version: "1.0.0",
+          description:
+            "Documentation of api to solve task by 3205 recruitment team",
+        },
+      },
+      exclude: "/",
+      path: "/docs",
+    }),
+  )
   .use(
     cors({
       allowedHeaders: "Content-Type",
@@ -18,4 +34,6 @@ const app = new Elysia()
   .use(users)
   .listen(3000);
 
-console.log(`Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
+console.log(
+  `Elysia is running at http://${app.server?.hostname}:${app.server?.port}`,
+);
