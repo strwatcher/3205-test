@@ -12,13 +12,13 @@ export const form = createForm({
     },
     number: {
       init: "",
-      rules: [rules.number()],
     },
   },
 });
 
 sample({
   clock: form.formValidated,
+  fn: ({ email, number }) => ({ email, number: number.replace("-", "") }),
   target: getUsersQuery.start,
 });
 
@@ -29,12 +29,12 @@ export function useSearchForm() {
     onSubmit: searchForm.submit,
     fields: {
       email: {
-        onChange: searchForm.fields.email.onChange,
+        onInput: searchForm.fields.email.onChange,
         error: searchForm.fields.email.errorText(),
         value: searchForm.fields.email.value,
       },
       number: {
-        onChange: searchForm.fields.number.onChange,
+        onInput: searchForm.fields.number.onChange,
         error: searchForm.fields.number.errorText(),
         value: searchForm.fields.number.value,
       },
