@@ -5,19 +5,19 @@ To run frontend you need node.js and pnpm
 To install pnpm run in terminal:
 
 ```sh
-    npm install --global pnpm
+npm install --global pnpm
 ```
 
 After that you need to install dependencies:
 
 ```sh
-    pnpm i
+pnpm i
 ```
 
 And start development frontend server:
 
 ```sh
-    pnpm dev
+pnpm dev
 ```
 
 Server will started on http://localhost:5173
