@@ -1,0 +1,28 @@
+$font-size: 1em
+
+.wrapper
+  display: flex
+  flex-direction: column 
+  gap: 0.125rem
+
+.input 
+  color: var(--contrast)
+
+  padding: 0.5rem
+  border-radius: 0.5rem
+  font-size: $font-size
+
+  @layer 
+    
+    border: 0.125rem solid var(--secondary)
+  
+
+.label
+  color: var(--contrast)
+  padding-left: 0.25rem
+  font-size: $font-size
+
+.error
+  color: var(--error)
+  padding-left: 0.25rem
+  font-size: $font-size

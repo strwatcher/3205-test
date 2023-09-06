@@ -1,0 +1,16 @@
+session_name: 3205-frontend
+windows:
+  - window_name: editor
+    layout: tiled
+    shell_command_before:
+      - nvim
+  - window_name: vcs
+    layout: tiled
+    shell_command_before:
+      - lazygit
+  - window_name: runner
+    layout: tiled
+    shell_command_before:
+      - pnpm dev
+  - window_name: empty
+    layout: tiled
