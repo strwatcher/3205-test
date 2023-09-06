@@ -12,6 +12,8 @@
   "dependencies": {
     "@farfetched/core": "^0.8.14",
     "@farfetched/zod": "^0.8.14",
+    "@maskito/core": "^1.5.0",
+    "@maskito/react": "^1.5.0",
     "effector": "^22.8.6",
     "effector-forms": "^1.3.4",
     "effector-react": "^22.5.3",
