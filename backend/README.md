@@ -1,15 +1,25 @@
-# Elysia with Bun runtime
+# Backend of 3205 test task
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
+To run frontend you need bun (faster node.js alternative)
+
+To install bun run in terminal(linux, macos, wsl):
+
+```sh
+    curl -fsSL https://bun.sh/install | bash
 ```
 
-## Development
-To start the development server run:
-```bash
-bun run dev
+If you use Windows check up bun site: https://bun.sh
+
+After that you need to install dependencies:
+
+```sh
+    bun i
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+And start development frontend server:
+
+```sh
+    bun run dev
+```
+
+Server will started on http://localhost:3000
