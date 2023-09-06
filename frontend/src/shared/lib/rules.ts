@@ -4,18 +4,12 @@ export const rules = {
   required: (): Rule<string> => ({
     name: "required",
     validator: (value) => Boolean(value),
-    errorText: "Это поле обязательное",
+    errorText: "Обязательное поле",
   }),
   emailPart: (): Rule<string> => ({
     name: "emailPart",
-    validator: (value) => /[\d \w]+(@([\d \w]+(.([\d \w]+)?)?)?)?/.test(value), //TODO: so this
-    errorText: "Неверный формат",
-  }),
-  number: (): Rule<string> => ({
-    name: "number",
-    validator: (value) => {
-      return /[0-9]+/.test(value) || !value;
-    },
+    validator: (value) =>
+      /^[\d \w]+(@([\d \w]+(.([\d \w]+)?)?)?)?$/.test(value),
     errorText: "Неверный формат",
   }),
 };

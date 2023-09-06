@@ -4,7 +4,7 @@ import { Show } from "@/shared/lib/show";
 import React from "react";
 
 export type InputProps = {
-  onChange: (value: string) => void;
+  onInput: (value: string) => void;
   error?: string;
   value: string;
   label: string;
@@ -25,7 +25,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           id={inputId}
           className={s.input}
           value={props.value}
-          onChange={(e) => props.onChange(e.target.value)}
+          onInput={(e) => props.onInput(e.currentTarget.value)}
         />
         <Show when={props.error}>
           <span className={s.error}>{props.error}</span>
